@@ -57,11 +57,13 @@ _venv::gen(){
     if [ $? -ne 0 ];then
         return 1
     fi
-    echo Gen virtualenv success
-    echo Name: $venv_name
-    echo Python: $venv_python
-    echo Location: $VENVS_PATH/$venv_name
-    echo Activate: venv activate $venv_name
+
+    if [ $3 = "-r" ] && [ ! -z $4 ]; then
+        _venv::activate $venv_name
+        pip install -r $4
+    fi
+    
+    _venv::desc $venv_name
 
     if [ ! -z $OLD_ENV ]; then
         source $OLD_ENV/bin/activate
