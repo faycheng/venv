@@ -62,7 +62,7 @@ _venv::gen(){
         _venv::activate $venv_name
         pip install -r $4
     fi
-    
+
     _venv::desc $venv_name
 
     if [ ! -z $OLD_ENV ]; then
@@ -179,7 +179,7 @@ venv() {
     *)
         echo "Usage: venv\n"
         echo "Management Commands:"
-        printf "%-10s %-30s\n" gen "Generate venv: gen VENV_NAME PYTHON_EXECUTABLE"
+        printf "%-10s %-30s\n" gen "Generate venv: gen VENV_NAME PYTHON_EXECUTABLE -r REQUIREMENTS.txt"
         printf "%-10s %-30s\n" remove "Remove venv: remove VENV_NAME"
         printf "%-10s %-30s\n" desc "Show details of venv: desc VENV_NAME"
         printf "%-10s %-30s\n" list "List all venvs: list"
