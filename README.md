@@ -66,7 +66,7 @@ Activate: venv activate dev-py3
 Generate a new virtualenv according to requirements:
 
 ```
-venv gen candy-dev $(which python3) -r requirements.txt
+> venv gen candy-dev $(which python3) -r requirements.txt
 Running virtualenv with interpreter /usr/local/bin/python3
 Using base prefix '/usr/local/Cellar/python3/3.6.2/Frameworks/Python.framework/Versions/3.6'
 New python executable in /Users/chengfei/.venvs/candy-dev/bin/python3.6
