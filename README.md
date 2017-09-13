@@ -2,9 +2,8 @@
 
 Watch the demo:
 
-```
 [![asciicast](https://asciinema.org/a/137551.png)](https://asciinema.org/a/137551)
-```
+
 
 ##  Main Features
 
